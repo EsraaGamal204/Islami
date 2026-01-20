@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/model/HadethModel.dart';
-
 import '../../../Core/resources/AssetsManager.dart';
 import '../../../Core/resources/ColorManager.dart';
 

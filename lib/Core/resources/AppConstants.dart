@@ -1,3 +1,7 @@
+import 'package:islami_app/Core/resources/AssetsManager.dart';
+import 'package:islami_app/Core/resources/StringManager.dart';
+import 'package:islami_app/model/OnboardingModel.dart';
+
 import '../../Model/SuraModel.dart';
 
  abstract final class Appconstants {
@@ -117,5 +121,24 @@ import '../../Model/SuraModel.dart';
     Suramodel(suraNumber: 113, suraNameEn: "Al-Falaq", suraNameAr: "الفلق", suraVerses: 5),
     Suramodel(suraNumber: 114, suraNameEn: "An-Nas", suraNameAr: "الناس", suraVerses: 6),
   ];
+ static List<Onboardingmodel> OnboardingList =[
+   Onboardingmodel(image: Assetsmanager.Onboarding1,
+       desc: StringManager.Onboardingdes1),
+   Onboardingmodel(image: Assetsmanager.Onboarding2,
+       desc:StringManager.Onboardingdes2,title: StringManager.Onboardingtit2),
+   Onboardingmodel(image: Assetsmanager.Onboarding3,
+       desc:StringManager.Onboardingdes3,title: StringManager.Onboardingtit3),
+   Onboardingmodel(image: Assetsmanager.Onboarding4,
+ desc:StringManager.Onboardingdes4,title: StringManager.Onboardingtit4),
+   Onboardingmodel(image: Assetsmanager.Onboarding5,
+ desc:StringManager.Onboardingdes5,title: StringManager.Onboardingtit5),
+ ];
+ static List<String> zekrList=[
+   StringManager.Zakr1,
+   StringManager.Zakr2,
+   StringManager.Zakr3,
+   StringManager.Zakr4,
+
+ ];
 
 }

@@ -9,12 +9,14 @@ import '../../../../Sura_details/Screen/Sura_Details_Screen.dart';
 
 class SuraItem extends StatelessWidget {
   Suramodel suramodel ;
-  SuraItem( this.suramodel);
+  void Function(Suramodel)onSuraClick;
+  SuraItem( this.suramodel,this.onSuraClick);
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return InkWell(
       onTap: () {
+        onSuraClick(suramodel);
         Navigator.pushNamed(context, SuraDetailsScreen.routeName,
             arguments:suramodel);
       },

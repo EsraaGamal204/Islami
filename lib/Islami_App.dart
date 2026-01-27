@@ -5,8 +5,11 @@ import 'package:islami_app/Ui/Sura_details/Screen/Sura_Details_Screen.dart';
 import 'package:islami_app/Ui/on_boarding/Screen/Onboarding_Screen.dart';
 
 class IslamiApp extends StatelessWidget {
+  final bool seenOnboarding;
+  IslamiApp({required this.seenOnboarding});
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       routes: {
         OnboardingScreen.routeName:(_)=>OnboardingScreen(),
@@ -14,7 +17,9 @@ class IslamiApp extends StatelessWidget {
         SuraDetailsScreen.routeName:(_)=>SuraDetailsScreen(),
         HadethDetails.routeName:(_)=> HadethDetails(),
       },
-      initialRoute:OnboardingScreen.routeName ,
+      initialRoute:  seenOnboarding
+        ? HomeScreen.routeName
+        : OnboardingScreen.routeName,
 
       debugShowCheckedModeBanner: false,
     );
